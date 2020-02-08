@@ -1,0 +1,23 @@
+
+button {
+   
+    background-color: #1ea6f4;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    font-size: 18px;
+    padding: 5px;
+    
+    
+    cursor: pointer;
+    margin: 5px;
+    border-radius:50px;
+
+  }
+  table {
+    border-collapse: collapse;
+  }
+  
+  table, td, th {
+    border: 1px solid black;
+  }

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/css-s/conatctus.CSS">   
+    <title>Landing Page</title>
+</head>
+<body>
+    <header class="container-fluid bg-warning">
+        <a class="navbar-brand" href="#">
+            <img class="img-fluid rounded-circle float-left img-thumbnail" src="assets/images/logo.png"/>
+        </a> 
+    </header>
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <a class="navbar-brand" href="#">FITNESS TRAINER</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav ">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="addAppointment.html">Place Appointment</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="viewAppointments.html">View Appointment</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contactus.html">Contact Us</a>
+              </li>    
+            </ul>
+          </div> 
+        
+         
+    </nav>
+
+    <div class="sidebar ">
+        <div class="sidebar-header">
+            <h3>MENU</h3>
+        </div>
+        <ul class="nav nav-pills flex-column">
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="addAppointment.html">Place Appointment</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="viewAppointments.html">View Appointment</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="contactus.html">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+
+        <div class="content">
+            <div class="row ">
+                <div class="d-flex justify-content-end col-sm-12">
+                <div class="container p-3 my-3 border position-relative">
+                    <section id="contact" >
+                        <div class="container">
+                             <div class="row">
+                                  <fieldset>
+                                      <legend><h1>CONTACT US</h1></legend>
+                                  <div class="row">
+                                  <div class="col-md-7 col-sm-10">
+                                       
+                                        
+                                           <form id="contact-form" action="#" method="get">
+                                                 <div class="col">
+                                                      <input type="text" class="form-control" name="name" placeholder="Name" >
+                                                 </div>
+                                                 <div class="col">
+                                                      <input type="email" class="form-control" name="email" placeholder="Email" required="">
+                                                 </div>
+                                                 <div class="col">
+                                                      <textarea class="form-control" rows="5" name="message" placeholder="Message" required=""></textarea>
+                                                 </div>
+                                                 <div class="col">
+                                                      <button id="submit" type="submit" class="form-control" name="submit">Send Message</button>
+                                                 </div>
+                                           </form>
+                                       </div>
+                                   </div>
+                                  </div>
+                               </fieldset>
+                   
+                                  <div class="col-md-5 col-sm-8">
+                                       <fieldset>
+                                          <legend><h1>CONTACT INFO</h1></legend>
+                                            <p><i class="fa fa-map-marker"></i> 456 WhiteFeild 22000, Banglore City, India</p>
+                                            <p><i class="fa fa-comment"></i> <a href="mailto:abcdef@gmail.com">info@company.com</a></p>
+                                            <p><i class="fa fa-phone"></i> +91 9867354261</p>
+                                    
+                        </div>
+                       </fieldset>
+                   </section>
+                   
+                </div>
+                </div>
+
+               
+            </div>
+         </div>
+
+            
+        </div>
+        
+      
+
+    
+</body>
+</html>

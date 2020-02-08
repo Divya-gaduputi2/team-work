@@ -1,0 +1,274 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel="stylesheet" href="assets/css/css-p/adda.css">
+    <script src="assets/js/appointmentScript.js"></script>
+    <title>Landing Page</title>
+</head>
+<body>
+    <header class="container-fluid bg-warning">
+        <a class="navbar-brand" href="#">
+            <img class="img-fluid rounded-circle float-left img-thumbnail" src="assets/images/logo.png"/>
+        </a> 
+    </header>
+
+    <nav class="navbar navbar-expand-sm bg-dark navbar-dark">
+        <a class="navbar-brand" href="#">FITNESS TRAINER</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#collapsibleNavbar">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="collapsibleNavbar">
+            <ul class="navbar-nav ">
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="addAppointment.html">Place Appointment</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="viewAppointments.html">View Appointment</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contactus.html">Contact Us</a>
+              </li>    
+            </ul>
+          </div> 
+        
+         
+    </nav>
+
+    <div class="sidebar ">
+        <div class="sidebar-header">
+            <h3>MENU</h3>
+        </div>
+        <ul class="nav nav-pills flex-column">
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="#">Place Appointment</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="#">View Appointment</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link text-dark" href="contactus.html">Contact Us</a>
+          </li>
+        </ul>
+      </div>
+
+        <div class="content">
+            <div class="row ">
+                <div class="d-flex justify-content-end col-sm-12">
+                <div class="container p-3 my-3 border position-relative">
+                    <h1 text:>Appointment Booking</h1>
+    
+       
+        <form name="RegForm"  action="viewAppointments.html" onsubmit="return addAppointmentFormSubmit()" >
+
+            <p>
+                <label>Name
+                    <input type="text" placeholder="firstname" required id="name" pattern="[A-Za-z]{3,}" autofocus>
+                    <input type="text" placeholder="lastname" required pattern="[A-Za-z]{3,}">
+                </label>
+            </p>
+        
+            <p>
+                <label>age
+                    <input type="number" name="phone_number" id="age" pattern="[0-9]{2}" min="18" max="60">
+                </label>
+            </p>
+        
+        
+        
+            <p>
+                <label>Email
+                    <input type="email" name="email_address">
+                </label>
+            </p>
+            <p>
+                <label>Phone
+                    <input type="tel" name="phone_number" id="phone" min="10" max="60" pattern="[1-9]\d{9}">
+                </label>
+            </p>
+        
+            <fieldset>
+                <legend>Address</legend>
+                <input type="text" placeholder="street adress" size="70"><br><br>
+                <input type="text" placeholder="city" id="city" pattern="[A-Za-z]{3,}">
+                <input type="text" placeholder="pincode" pattern="[0-9]{6}">
+                <input type="text" name="dropoff_place" placeholder="country" required list="destinations" id="address">
+        
+        
+                <datalist id="destinations">
+                    <option value="india">
+                    <option value="amerika">
+                    <option value="britan">
+                    <option value="ingland">
+                </datalist>
+        
+            </fieldset>
+            <br>
+
+         
+
+            <fieldset id="group1">
+                <legend>trainer preferences</legend>
+                <p><label> <input type="radio" name="group1" onclick="myFunction1(this.value)" value="male" required  id="tpref"> male trainer</label></p>
+                <p><label> <input type="radio" name="group1" onclick="myFunction1(this.value)"value="female" required  id="tpref"> female trainer</label></p>
+                <p><label> <input type="radio" name="group1" onclick="myFunction1(this.value)"value="no_preference" required  id="tpref"> no preference </label></p>
+            </fieldset>
+            <br>
+        
+            <label>DO YOU NEED PHYSIO THERAPIST</label>
+            <fieldset id="group2">
+        
+                <label> <input type="radio" name="group2" required value="car">yes</label>
+                <label> <input type="radio" name="group2" required value="van"> no</label>
+        
+            </fieldset>
+            <br>
+            <div>
+                <label>Appointment</label>
+                <table >
+                    <thead>
+                        <tr>
+                            <th>Day</th>
+                            <th>7AM TO 9AM</th>
+                            <th>9AM TO 11AM</th>
+                            <th>11AM TO 1PM</th>
+                            <th>1PM TO 3PM</th>
+                            <th>3PM TO 5PM</th>
+                        </tr>
+                    </thead>
+                    <tbody id="one">
+                        <tr>
+                            <td>Monday</td>
+                            <td><input type="radio" name="reason" value="1">1</td>
+                            <td><input type="radio" name="reason" value="2">2</td>
+                            <td><input type="radio" name="reason" value="3">3</td>
+                            <td><input type="radio" name="reason" value="4">4</td>
+                            <td><input type="radio" name="reason" value="5">5</td>
+
+                        </tr>
+                        <tr>
+                            <td>Tuesday</td>
+                            <td><input type="radio" name="reason" value="1">1</td>
+                            <td><input type="radio" name="reason" value="2">2</td>
+                            <td><input type="radio" name="reason" value="3">3</td>
+                            <td><input type="radio" name="reason" value="4">4</td>
+                            <td><input type="radio" name="reason" value="5">5</td>
+
+                        </tr>
+                        <tr>
+                            <td>Wednesday</td>
+                            <td><input type="radio" name="reason" value="1">1</td>
+                            <td><input type="radio" name="reason" value="2">2</td>
+                            <td><input type="radio" name="reason" value="3">3</td>
+                            <td><input type="radio" name="reason" value="4">4</td>
+                            <td><input type="radio" name="reason" value="5">5</td>
+
+                        </tr>
+                        <tr>
+                            <td>Thursday</td>
+                            <td><input type="radio" name="reason" value="1">1</td>
+                            <td><input type="radio" name="reason" value="2">2</td>
+                            <td><input type="radio" name="reason" value="3">3</td>
+                            <td><input type="radio" name="reason" value="4">4</td>
+                            <td><input type="radio" name="reason" value="5">5</td>
+
+                        </tr>
+                        <tr>
+                            <td>Friday</td>
+                            <td><input type="radio" name="reason" value="1">1</td>
+                            <td><input type="radio" name="reason" value="2">2</td>
+                            <td><input type="radio" name="reason" value="3">3</td>
+                            <td><input type="radio" name="reason" value="4">4</td>
+                            <td><input type="radio" name="reason" value="5">5</td>
+
+                        </tr>
+                        <tr>
+                            <td>Saturday</td>
+                            <td><input type="radio" name="reason" value="1">1</td>
+                            <td><input type="radio" name="reason" value="2">2</td>
+                            <td><input type="radio" name="reason" value="3">3</td>
+                            <td><input type="radio" name="reason" value="4">4</td>
+                            <td><input type="radio" name="reason" value="5">5</td>
+
+                        </tr>
+                        <tr>
+                            <td>Sunday</td>
+                            <td><input type="radio" name="reason" value="1">1</td>
+                            <td><input type="radio" name="reason" value="2">2</td>
+                            <td><input type="radio" name="reason" value="3">3</td>
+                            <td><input type="radio" name="reason" value="4">4</td>
+                            <td><input type="radio" name="reason" value="5">5</td>
+
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <!-- <div clss="form-group">
+                <div class="col-md-4">
+                    <button id="button" name="button" class="btn btn-primary" required >Appoint</button>
+                </div>
+            </div> -->
+            <fieldset id="group3">
+                <legend>SELECT A PACKAGE</legend>
+                <p>
+                    <input type="radio" name="group3" onclick="myFunction(this.value)" value=500 >one time assesment (INR 500)
+                </p>
+                <p>
+                    <input type="radio" name="group3" onclick="myFunction(this.value)" value=1200 >four weekly sessions (INR 1200)
+                </p>
+                <p>
+                    <input type="radio" name="group3" onclick="myFunction(this.value)" value=3000 >12 weekly sessions(INR 3000)
+                </p>
+                
+            </fieldset>
+        
+        
+        
+            <!-- <p>
+                <label>APPOINMENT Date/Time
+                    <input type="datetime-local" min="2020-08-02" name="pickup_time" required>
+                </label>
+            </p> -->
+        
+            <p>
+                <label>
+                    QUOTE INR:
+                </label>
+            </p>
+            price: <input type="text" id="pkg">
+        
+             <div class="form-group">
+                <div class="col-md-4">
+                    <button id="button" name="button" class="btn btn-primary" required >SUBMIT BOOKING</button>
+                </div>
+            </div> 
+        
+           
+        
+        </form>
+                 </div>
+                </div>
+               
+            </div>
+         </div>
+
+            
+        </div>
+        
+      
+
+    
+</body>
+</html>

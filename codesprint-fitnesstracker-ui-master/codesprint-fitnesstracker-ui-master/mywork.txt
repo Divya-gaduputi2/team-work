@@ -1,0 +1,22 @@
+My associate id:
+123456
+Other team members:
+123457, 123458, 123459, 123460, 123461
+Team lead:
+123460
+My Role in team:
+1. To develop homepage and contact us page
+My development files:
+1. index.html
+2. contact.html
+3. home.css
+4. contact.css
+5. contact.js
+I was strong in:
+1. HTML
+2. Css
+3. Documentation
+I was weak in:
+1. Javascript Validation
+Feedback:
+1. Able to read codesprint document 1 day in advance will help.
